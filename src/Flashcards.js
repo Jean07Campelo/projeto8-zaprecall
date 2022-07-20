@@ -1,13 +1,12 @@
 export default function Flashcards () {
     return (
         <>
-        <h1>Tela Contendo todos flashcards</h1>
+        {renderCards}
         </>
     )
 }
 
-
-const flashcards = [
+const cards = [
   {
     question: "O que é JSX?",
     response: "Uma extensão de linguagem do JavaScript",
@@ -25,3 +24,10 @@ const flashcards = [
     response: "expressões",
   },
 ];
+
+const renderCards = cards.map((card, index) => 
+    <div className='card'>
+        <h2>Pergunta {index + 1}</h2>
+        <ion-icon name="play-outline"></ion-icon>
+    </div>
+)

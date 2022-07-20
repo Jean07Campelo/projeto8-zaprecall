@@ -6,7 +6,7 @@ export default function HomeScreen() {
   const img = "../assets/logo.png";
   const description = "Logo ZapRecall,um raio amarelo com contorno vermelho";
 
-  const [screen, setScreen] = React.useState(true);
+  const [screen, setScreen] = React.useState(false);
 
   return (
     <>
