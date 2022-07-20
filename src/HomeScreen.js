@@ -1,15 +1,24 @@
+import React from "react";
+
+import Flashcards from "./Flashcards";
+
 export default function HomeScreen() {
   const img = "../assets/logo.png";
   const description = "Logo ZapRecall,um raio amarelo com contorno vermelho";
 
+  const [screen, setScreen] = React.useState(true);
+
   return (
     <>
-      <img src={img} alt={description}></img>
-
-      <h1>ZapRecall</h1>
-
-      <button>Iniciar Recall!</button>
-      
+      {screen ? (
+        <>
+          <img src={img} alt={description}></img>
+          <h1>ZapRecall</h1>
+          <button onClick={() => setScreen(!screen)}>Iniciar Recall!</button>
+        </>
+      ) : (
+        <Flashcards />
+      )}
     </>
   );
 }
