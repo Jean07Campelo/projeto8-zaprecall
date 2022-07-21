@@ -6,7 +6,31 @@ export default function HomeScreen() {
   const img = "../assets/logo.png";
   const description = "Logo ZapRecall,um raio amarelo com contorno vermelho";
 
-  const [screen, setScreen] = React.useState(true);
+  const [screen, setScreen] = React.useState(false);
+  const [isTurned, setIsTurned] = React.useState(false);
+
+  const cards = [
+    {
+      question: "O que é JSX?",
+      response: "Uma extensão de linguagem do JavaScript",
+      turned: {isTurned},
+    },
+    {
+      question: "O React é ...",
+      response: "uma biblioteca JavaScript para construção de interfaces",
+      turned: {isTurned},
+    },
+    {
+      question: "Componentes devem iniciar com ...",
+      response: "letra maiúscula",
+      turned: {isTurned},
+    },
+    {
+      question: "Podemos colocar ... dentro do JSX",
+      response: "expressões",
+      turned: {isTurned},
+    },
+  ];
 
   return (
     <>
@@ -17,27 +41,11 @@ export default function HomeScreen() {
           <button onClick={() => setScreen(!screen)}>Iniciar Recall!</button>
         </>
       ) : (
-        <Flashcards cards={cards} />
+        <Flashcards cards={cards} isTurned={isTurned} setIsTurned={setIsTurned} />
       )}
     </>
   );
+
+  
 }
 
-const cards = [
-  {
-    question: "O que é JSX?",
-    response: "Uma extensão de linguagem do JavaScript",
-  },
-  {
-    question: "O React é ...",
-    response: "uma biblioteca JavaScript para construção de interfaces",
-  },
-  {
-    question: "Componentes devem iniciar com ...",
-    response: "letra maiúscula",
-  },
-  {
-    question: "Podemos colocar ... dentro do JSX",
-    response: "expressões",
-  },
-];
