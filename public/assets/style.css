@@ -31,4 +31,5 @@ h2 {
 
 .card ion-icon {
   font-size: 30px;
+  cursor: pointer;
 }
