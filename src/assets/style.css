@@ -2,15 +2,14 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&family=Righteous&display=swap');
-
-
 body {
   background-color: #FB6B6B;
   display: flex;
   justify-content: center;
+}
+
+h1 {
+  font-family: Righteous;
 }
 
 .card {
