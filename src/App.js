@@ -1,12 +1,20 @@
+import React from "react";
+
 import HomeScreen from "./HomeScreen";
+import Flashcards from "./Flashcards";
 
 export default function App() {
+    const [screen, setScreen] = React.useState(true);
+
     return (
       <>
-        <HomeScreen />
-        {console.log(cards)}
+        {screen ? 
+        <HomeScreen setScreen={setScreen} /> 
+        :
+        <Flashcards />}
+       
       </>
-    );
+    )
   }
 
 
