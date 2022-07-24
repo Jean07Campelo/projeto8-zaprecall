@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Flashcards({ cards, setCards }) {
+export default function Flashcards() {
 
   const renderCards = cards.map((card, index) => (
     <div className="card" key={index}>
