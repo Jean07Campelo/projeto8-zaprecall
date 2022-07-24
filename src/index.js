@@ -1,13 +1,4 @@
 import ReactDOM from "react-dom";
-
-import HomeScreen from "./HomeScreen";
-
-function App() {
-  return (
-    <>
-      <HomeScreen />
-    </>
-  );
-}
+import App from 'App.js';
 
 ReactDOM.render(<App />, document.querySelector(".root"));
