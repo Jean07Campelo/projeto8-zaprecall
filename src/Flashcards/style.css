@@ -2,13 +2,13 @@
     background-color: #FFFFFF;
     width: 300px;
     height: 66px;
-    margin: 16px;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3 );
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2 );
     color: #333333;
 
   }
@@ -28,9 +28,27 @@
     background-color: #FFFFD4;
     width: 300px;
     height: 130px;
-    margin: 16px;
+    margin-bottom: 24px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2 );
+    color: #333333;
   }
+
+  .card-open h3 {
+    font-size: 18px;
+    font-family: Recursive;
+  }
+
+  .card-open img {
+    height: 20px;
+    position: relative;
+    margin-top: 74px;
+  }
+
+  .card-open img:hover {
+    cursor: pointer;
+  }
+

@@ -4,8 +4,10 @@ import './style.css'
 import Top from "../Top/Top";
 import Options from '../Options'
 import Footer from '../Footer';
+import turned from '../assets/turned.png';
 
 export default function Flashcards({ cards, status, setStatus, icons, setIcons }) {
+  const description = 'Semi-círculo com uma flecha na ponta'
   const [qtd, setQtd] = React.useState(0);
   const [response, setResponse] = React.useState(false);
 
@@ -20,10 +22,7 @@ export default function Flashcards({ cards, status, setStatus, icons, setIcons }
             <Options status={status} setStatus={setStatus} icons={icons} setIcons={setIcons} />
 
           ) : (
-            <ion-icon
-              name="reload-outline"
-              onClick={() => setResponse(!response)}
-            ></ion-icon>
+            <img src={turned} alt={description} onClick={() => setResponse(!response)}/>
           )}
         </div>
       ) : (
