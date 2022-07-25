@@ -1,6 +1,7 @@
 import React from "react";
 
 import './style.css'
+import Top from "../Top/Top";
 import Options from '../Options'
 import Footer from '../Footer';
 
@@ -42,6 +43,7 @@ export default function Flashcards({ cards, status, setStatus, icons, setIcons }
   ));
 
   return <>
+  <Top />
   {renderCard}
   <Footer cards={cards} status={status} icons={icons} />
   </>;
