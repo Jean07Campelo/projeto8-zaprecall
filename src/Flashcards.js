@@ -9,21 +9,22 @@ export default function Flashcards({ cards }) {
       {card.open === "open" ? (
         <div className="card-open" key={index}>
           <h3>{card.question}</h3>
-          
-         
-          {response ? 
-          <>
-          <h2>hora de responder</h2>
-          <buttom>Não Lembrei</buttom>
-          <buttom>Quase não lembrei</buttom>
-          <buttom>Zap!</buttom>
-          </>
-          
-        :
-        <ion-icon name="reload-outline" onClick={()=>
-          setResponse(true)}></ion-icon>
-        }
 
+          {response ? (
+            <>
+              <h2>hora de responder</h2>
+              <buttom onClick={() => (card.status = "nao_lembrou")}>
+                Não Lembrei
+              </buttom>
+              <buttom onClick={() => (card.status = "quase_nao_lembrou")}>Quase não lembrei</buttom>
+              <buttom onClick={() => (card.status = "zap")}>Zap!</buttom>
+            </>
+          ) : (
+            <ion-icon
+              name="reload-outline"
+              onClick={() => setResponse(true)}
+            ></ion-icon>
+          )}
         </div>
       ) : (
         <div className="card-closed" key={index}>
@@ -40,5 +41,6 @@ export default function Flashcards({ cards }) {
     </>
   ));
 
-  return <>{renderCard}</>;
+  return <>{renderCard}
+  {console.log(cards)}</>;
 }
