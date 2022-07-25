@@ -2,17 +2,20 @@ import React from "react";
 
 import HomeScreen from "./HomeScreen";
 import Flashcards from "./Flashcards";
+import Footer from './Footer';
 
 export default function App() {
     const [screen, setScreen] = React.useState(false);
+    const [status, setStatus] = React.useState([]);
+
 
     return (
       <>
         {screen ? 
         <HomeScreen setScreen={setScreen} /> 
         :
-        <Flashcards cards={cards}/>}
-       
+        <Flashcards cards={cards} status={status} setStatus={setStatus} />}
+        <Footer status={status} />
       </>
     )
   }

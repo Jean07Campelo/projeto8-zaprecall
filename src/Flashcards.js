@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Flashcards({ cards }) {
+export default function Flashcards({ cards, status, setStatus }) {
   const [qtd, setQtd] = React.useState(0);
   const [response, setResponse] = React.useState(false);
 
@@ -13,11 +13,30 @@ export default function Flashcards({ cards }) {
           {response ? (
             <>
               <h2>hora de responder</h2>
-              <buttom onClick={() => (card.status = "nao_lembrou")}>
+              <buttom
+                onClick={() => {
+                  card.status = "nao_lembrou";
+                  setStatus([...status, "não_lembrou"]);
+                }}
+              >
                 Não Lembrei
               </buttom>
-              <buttom onClick={() => (card.status = "quase_nao_lembrou")}>Quase não lembrei</buttom>
-              <buttom onClick={() => (card.status = "zap")}>Zap!</buttom>
+              <buttom
+                onClick={() => {
+                  card.status = "quase_nao_lembrou";
+                  setStatus([...status, "quase_não_lembrou"]);
+                }}
+              >
+                Quase não lembrei
+              </buttom>
+              <buttom
+                onClick={() => {
+                  card.status = "zap";
+                  setStatus([...status, "zap"]);
+                }}
+              >
+                Zap!
+              </buttom>
             </>
           ) : (
             <ion-icon
@@ -41,6 +60,9 @@ export default function Flashcards({ cards }) {
     </>
   ));
 
-  return <>{renderCard}
-  {console.log(cards)}</>;
+  return (
+    <>
+      {renderCard}
+    </>
+  );
 }
