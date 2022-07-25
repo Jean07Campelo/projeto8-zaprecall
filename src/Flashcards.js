@@ -1,19 +1,28 @@
 import React from "react";
 
-export default function Flashcards() {
+export default function Flashcards({ cards }) {
+  const [qtd, setQtd] = React.useState(0);
 
-  /*
-  const renderCards = cards.map((card, index) => (
-    <div className="card" key={index}>
-      <h2>Pergunta {index + 1}</h2>
-      
-      <ion-icon name="play-outline"></ion-icon>
-
-    </div>
+  const renderCard = cards.map((card, index) => (
+    <>
+      {card.open === "open" ? (
+        <div className="card-open" key={index}>
+          <h3>{card.question}</h3>
+        </div>
+      ) : (
+        <div className="card-closed" key={index}>
+          <h2>Pergunta {index + 1}</h2>
+          <ion-icon
+            name="play-outline"
+            onClick={() => {
+              card.open = "open";
+              setQtd(qtd + 1);
+            }}
+          ></ion-icon>
+        </div>
+      )}
+    </>
   ));
-    */
-  return <>
-    <h1>Tela Flashcards</h1>
-  </>;
-  
+
+  return <>{renderCard}</>;
 }
