@@ -1,4 +1,5 @@
 import React from "react";
+import Options from './Options'
 
 export default function Flashcards({ cards, status, setStatus }) {
   const [qtd, setQtd] = React.useState(0);
@@ -11,37 +12,13 @@ export default function Flashcards({ cards, status, setStatus }) {
           <h3>{card.question}</h3>
 
           {response ? (
-            <>
-              <h2>hora de responder</h2>
-              <buttom
-                onClick={() => {
-                  card.status = "nao_lembrou";
-                  setStatus([...status, "não_lembrou"]);
-                }}
-              >
-                Não Lembrei
-              </buttom>
-              <buttom
-                onClick={() => {
-                  card.status = "quase_nao_lembrou";
-                  setStatus([...status, "quase_não_lembrou"]);
-                }}
-              >
-                Quase não lembrei
-              </buttom>
-              <buttom
-                onClick={() => {
-                  card.status = "zap";
-                  setStatus([...status, "zap"]);
-                }}
-              >
-                Zap!
-              </buttom>
-            </>
+
+            <Options status={status} setStatus={setStatus}/>
+
           ) : (
             <ion-icon
               name="reload-outline"
-              onClick={() => setResponse(true)}
+              onClick={() => setResponse(!response)}
             ></ion-icon>
           )}
         </div>
@@ -60,9 +37,5 @@ export default function Flashcards({ cards, status, setStatus }) {
     </>
   ));
 
-  return (
-    <>
-      {renderCard}
-    </>
-  );
+  return <>{renderCard}</>;
 }

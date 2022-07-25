@@ -26,25 +26,21 @@ export default function App() {
       question: "O que é JSX?",
       response: "Uma extensão de linguagem do JavaScript",
       open: 'no',
-      status: '',
     },
     {
       question: "O React é ...",
       response: "uma biblioteca JavaScript para construção de interfaces",
       open: 'no',
-      status: '',
     },
     {
       question: "Componentes devem iniciar com ...",
       response: "letra maiúscula",
       open: 'no',
-      status: '',
     },
     {
       question: "Podemos colocar ... dentro do JSX",
       response: "expressões",
       open: 'no',
-      status: '',
     },
   ];
 
