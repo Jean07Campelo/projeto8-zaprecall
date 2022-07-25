@@ -11,11 +11,16 @@
     bottom: 0px;
     font-family: Recursive;
     font-size: 18px;
+    flex-direction: column;
   }
 
-ion-icon .not-remember-icon {
+  .icons {
+    font-size: 24px;
+    margin-top: 4px;
+  }
+
+.not-remember-icon {
     color: #FF3030;
-    visibility: visible;
 }
 
 .almost-icon {
