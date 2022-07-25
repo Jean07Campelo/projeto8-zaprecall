@@ -19,7 +19,12 @@ export default function Flashcards({ cards, status, setStatus, icons, setIcons }
 
           {response ? (
 
-            <Options status={status} setStatus={setStatus} icons={icons} setIcons={setIcons} />
+            <Options 
+            status={status} 
+            setStatus={setStatus} 
+            icons={icons} 
+            setIcons={setIcons} 
+            cards={cards} />
 
           ) : (
             <img src={turned} alt={description} onClick={() => setResponse(!response)}/>

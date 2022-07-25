@@ -1,6 +1,6 @@
 import './style.css';
 
-export default function Option({ status, setStatus, icons, setIcons }) {
+export default function Option({ status, setStatus, icons, setIcons, cards }) {
   return (
     <div className='options'>
       <buttom className='not-remember'
