@@ -1,8 +1,7 @@
-export default function Footer({status}) {
-
-    console.log(status)
+export default function Footer({cards, status, icons}) {
 
   return <div className="footer">
-    footer
+    {icons.length}/{cards.length} CONCLUÍDOS
+    {icons}
     </div>;
 }

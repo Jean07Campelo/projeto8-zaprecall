@@ -1,7 +1,7 @@
 import React from "react";
 import Options from './Options'
 
-export default function Flashcards({ cards, status, setStatus }) {
+export default function Flashcards({ cards, status, setStatus, icons, setIcons }) {
   const [qtd, setQtd] = React.useState(0);
   const [response, setResponse] = React.useState(false);
 
@@ -13,7 +13,7 @@ export default function Flashcards({ cards, status, setStatus }) {
 
           {response ? (
 
-            <Options status={status} setStatus={setStatus}/>
+            <Options status={status} setStatus={setStatus} icons={icons} setIcons={setIcons} />
 
           ) : (
             <ion-icon

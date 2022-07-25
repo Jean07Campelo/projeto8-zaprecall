@@ -7,6 +7,7 @@ import Footer from './Footer';
 export default function App() {
     const [screen, setScreen] = React.useState(false);
     const [status, setStatus] = React.useState([]);
+    const [icons, setIcons] = React.useState([]);
 
 
     return (
@@ -14,8 +15,8 @@ export default function App() {
         {screen ? 
         <HomeScreen setScreen={setScreen} /> 
         :
-        <Flashcards cards={cards} status={status} setStatus={setStatus} />}
-        <Footer status={status} />
+        <Flashcards cards={cards} status={status} setStatus={setStatus} icons={icons} setIcons={setIcons}/>}
+        <Footer cards={cards} status={status} icons={icons} />
       </>
     )
   }
