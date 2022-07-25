@@ -34,3 +34,16 @@
 .zap {
     background-color: #2FBE34;
 }
+
+.not-remember-icon {
+color: #FF3030;
+visibility: visible;
+}
+
+.almost-icon {
+    color: #FF922E;
+}
+
+.zap-icon {
+    color: #2FBE34;
+}

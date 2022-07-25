@@ -3,7 +3,7 @@ import React from "react";
 import './style.css'
 import Top from "../Top/Top";
 import Options from '../Options/Options'
-import Footer from '../Footer';
+import Footer from '../Footer/Footer';
 import turned from '../assets/turned.png';
 
 export default function Flashcards({ cards, status, setStatus, icons, setIcons }) {
