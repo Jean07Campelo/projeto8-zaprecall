@@ -1,6 +1,8 @@
 import React from "react";
-import Options from './Options'
-import Footer from './Footer';
+
+import './style.css'
+import Options from '../Options'
+import Footer from '../Footer';
 
 export default function Flashcards({ cards, status, setStatus, icons, setIcons }) {
   const [qtd, setQtd] = React.useState(0);

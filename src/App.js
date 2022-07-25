@@ -1,10 +1,10 @@
 import React from "react";
 
 import HomeScreen from "./HomeScreen/HomeScreen";
-import Flashcards from "./Flashcards";
+import Flashcards from "./Flashcards/Flashcards";
 
 export default function App() {
-    const [screen, setScreen] = React.useState(true);
+    const [screen, setScreen] = React.useState(false);
     const [status, setStatus] = React.useState([]);
     const [icons, setIcons] = React.useState([]);
 
