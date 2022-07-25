@@ -1,7 +1,9 @@
+import './style.css';
+
 export default function Option({ status, setStatus, icons, setIcons }) {
   return (
-    <>
-      <buttom
+    <div className='options'>
+      <buttom className='not-remember'
         onClick={() => {
           setStatus([...status, "não_lembrou"]);
           setIcons([...icons, <ion-icon name="close-circle"></ion-icon>])
@@ -9,7 +11,7 @@ export default function Option({ status, setStatus, icons, setIcons }) {
       >
         Não Lembrei
       </buttom>
-      <buttom
+      <buttom className='almost'
         onClick={() => {
           setStatus([...status, "quase_não_lembrou"]);
           setIcons([...icons, <ion-icon name="help-circle"></ion-icon>])
@@ -17,7 +19,7 @@ export default function Option({ status, setStatus, icons, setIcons }) {
       >
         Quase não lembrei
       </buttom>
-      <buttom
+      <buttom className='zap'
         onClick={() => {
           setStatus([...status, "zap"]);
           setIcons([...icons, <ion-icon name="checkmark-circle"></ion-icon>])
@@ -25,6 +27,6 @@ export default function Option({ status, setStatus, icons, setIcons }) {
       >
         Zap!
       </buttom>
-    </>
+    </div>
   );
 }

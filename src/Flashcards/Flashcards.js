@@ -2,7 +2,7 @@ import React from "react";
 
 import './style.css'
 import Top from "../Top/Top";
-import Options from '../Options'
+import Options from '../Options/Options'
 import Footer from '../Footer';
 import turned from '../assets/turned.png';
 

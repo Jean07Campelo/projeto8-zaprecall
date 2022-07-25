@@ -31,21 +31,23 @@
     margin-bottom: 24px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2 );
     color: #333333;
+    flex-direction: column;
   }
 
   .card-open h3 {
+    padding: 20px;
     font-size: 18px;
     font-family: Recursive;
   }
 
   .card-open img {
     height: 20px;
-    position: relative;
-    margin-top: 74px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 260px;
   }
 
   .card-open img:hover {

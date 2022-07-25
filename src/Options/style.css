@@ -1,0 +1,36 @@
+.options {
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.not-remember, .almost, .zap {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 86px;
+    height: 40px;
+    font-family: Recursive;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.not-remember, .almost, .zap:hover {
+    cursor:pointer;
+}
+
+.not-remember {
+    background-color: #FF3030;
+}
+
+.almost {
+    background-color: #FF922E;
+}
+
+.zap {
+    background-color: #2FBE34;
+}
