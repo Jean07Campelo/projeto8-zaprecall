@@ -1,11 +1,10 @@
 import React from "react";
 
-import HomeScreen from "./HomeScreen";
+import HomeScreen from "./HomeScreen/HomeScreen";
 import Flashcards from "./Flashcards";
-import Footer from './Footer';
 
 export default function App() {
-    const [screen, setScreen] = React.useState(false);
+    const [screen, setScreen] = React.useState(true);
     const [status, setStatus] = React.useState([]);
     const [icons, setIcons] = React.useState([]);
 
@@ -15,8 +14,12 @@ export default function App() {
         {screen ? 
         <HomeScreen setScreen={setScreen} /> 
         :
-        <Flashcards cards={cards} status={status} setStatus={setStatus} icons={icons} setIcons={setIcons}/>}
-        <Footer cards={cards} status={status} icons={icons} />
+        <Flashcards cards={cards} 
+        status={status} 
+        setStatus={setStatus} 
+        icons={icons} 
+        setIcons={setIcons} />}
+        
       </>
     )
   }

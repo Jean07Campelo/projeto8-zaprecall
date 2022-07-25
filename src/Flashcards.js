@@ -1,5 +1,6 @@
 import React from "react";
 import Options from './Options'
+import Footer from './Footer';
 
 export default function Flashcards({ cards, status, setStatus, icons, setIcons }) {
   const [qtd, setQtd] = React.useState(0);
@@ -34,8 +35,12 @@ export default function Flashcards({ cards, status, setStatus, icons, setIcons }
           ></ion-icon>
         </div>
       )}
+      
     </>
   ));
 
-  return <>{renderCard}</>;
+  return <>
+  {renderCard}
+  <Footer cards={cards} status={status} icons={icons} />
+  </>;
 }
